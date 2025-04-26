@@ -1,4 +1,4 @@
-### ENCODER 8TO3 DATAFLOW Modelling
+![Screenshot (231)](https://github.com/user-attachments/assets/0e2f5ed8-dadf-4dad-a14b-9df5a8b0ba01)### ENCODER 8TO3 DATAFLOW Modelling
 
 **AIM:**
 
@@ -45,23 +45,25 @@ Figure 02  Encoder 8 * 3
 Developed by: RegisterNumber: S.SELVARANI :212224040301
 */
 ```
-
-```module encoder(din,a,b,c);
-input [0:7] din;
+module  flip(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
+input y0,y1,y2,y3,y4,y5,y6,y7;
 output a,b,c;
-assign a=(din[4]|din[5]|din[6]|din[7]);
-assign b=(din[2]|din[3]|din[6]|din[7]);
-assign c=(din[1]|din[3]|din[5]|din[7]);
+assign a= ( y4 | y5 | y6 | y7);
+assign b= ( y2 | y3 | y6 | y7);
+assign c= ( y1 | y3 | y5 | y7);
 endmodule
+
 ```
 
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
-![Screenshot (224)](https://github.com/user-attachments/assets/bb5a9c44-5734-427a-9ce5-671b06ed3227)
+![Screenshot (230)](https://github.com/user-attachments/assets/36fe91fc-e702-44c1-8a7d-bff45ee1b8e0)
+
 
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
-![Screenshot (225)](https://github.com/user-attachments/assets/df7202c2-5b2f-4b27-a1dc-e1aa90f9bbc5)
+![Screenshot (231)](https://github.com/user-attachments/assets/f4bfe4cd-c9e1-4f31-bafd-e1a7bd0e96d6)
+
 
 
 **RESULTS**
